@@ -20,22 +20,22 @@ spec:
     spec:
       containers:
       - name: nodewebappcontainer
-        image: dockerhandson/node-web-app:1
+        image: nagasatishdocker/node-mithun:v1
         imagePullPolicy: Always
         imagePullSecrets:
         - name: privatereposecret
         ports:
-        - containerPort: 8080
+        - containerPort: 9090
         livenessProbe:
           httpGet:
             path: /
-            port: 8080
+            port: 9090
           initialDelaySeconds: 15
           timeoutSeconds: 30
         readinessProbe:
           httpGet:
             path: /
-            port: 8080
+            port: 9090
           initialDelaySeconds: 5
           periodSeconds: 5
           successThreshold: 1
