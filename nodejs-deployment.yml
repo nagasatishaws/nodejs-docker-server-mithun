@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: nodewebappcontainer
-        image: nagasatishdocker/node-mithun:v1
+        image: 18.217.12.100:8020/kubernetes-mithun:1
         imagePullPolicy: Always
         imagePullSecrets:
         - name: privatereposecret
